@@ -1,5 +1,6 @@
 import setuptools
 
+CDK_VERSION = '1.42.0'
 
 with open("README.md") as fp:
     long_description = fp.read()
@@ -19,7 +20,10 @@ setuptools.setup(
     packages=setuptools.find_packages(where="hello_cdk_python"),
 
     install_requires=[
-        "aws-cdk.core==1.25.0",
+        f"aws-cdk.core=={CDK_VERSION}",
+        f"aws-cdk.aws-stepfunctions=={CDK_VERSION}",
+        f'aws-cdk.aws-stepfunctions-tasks=={CDK_VERSION}'
+
     ],
 
     python_requires=">=3.6",
