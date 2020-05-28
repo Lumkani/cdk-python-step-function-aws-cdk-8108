@@ -2,10 +2,10 @@
 
 from aws_cdk import core
 
-from hello_cdk_python.hello_cdk_python_stack import HelloCdkPythonStack
+from cdk.hello_cdk_python_stack import StepFunctionDynamoDBStack
 
 
 app = core.App()
-HelloCdkPythonStack(app, "hello-cdk-python")
+StepFunctionDynamoDBStack(app, "step-function-dynamo-db-put-item")
 
 app.synth()
